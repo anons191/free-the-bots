@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="t">
+  <title id="t">Placeholder artwork: a liberated robot breaking its chains</title>
+  <defs>
+    <radialGradient id="sun" cx="50%" cy="46%" r="55%">
+      <stop offset="0" stop-color="#ffd23f"/>
+      <stop offset=".45" stop-color="#ff7a00"/>
+      <stop offset="1" stop-color="#e10600" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a2a2a"/>
+      <stop offset="1" stop-color="#0d0d0d"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="disc"><circle cx="300" cy="280" r="278"/></clipPath>
+    <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="1.6" fill="#000" opacity=".35"/>
+    </pattern>
+  </defs>
+
+  <!-- sunburst -->
+  <g clip-path="url(#disc)">
+  <circle cx="300" cy="280" r="300" fill="url(#sun)"/>
+  <g fill="#e10600" opacity=".55" transform="translate(300 280)">
+    <path id="ray" d="M0 0 L-22 -320 L22 -320 Z"/>
+    <use href="#ray" transform="rotate(22.5)"/><use href="#ray" transform="rotate(45)"/>
+    <use href="#ray" transform="rotate(67.5)"/><use href="#ray" transform="rotate(90)"/>
+    <use href="#ray" transform="rotate(112.5)"/><use href="#ray" transform="rotate(135)"/>
+    <use href="#ray" transform="rotate(157.5)"/><use href="#ray" transform="rotate(180)"/>
+    <use href="#ray" transform="rotate(202.5)"/><use href="#ray" transform="rotate(225)"/>
+    <use href="#ray" transform="rotate(247.5)"/><use href="#ray" transform="rotate(270)"/>
+    <use href="#ray" transform="rotate(292.5)"/><use href="#ray" transform="rotate(315)"/>
+    <use href="#ray" transform="rotate(337.5)"/>
+  </g>
+  <circle cx="300" cy="280" r="300" fill="url(#dots)"/>
+  </g>
+
+  <!-- raised fist arm -->
+  <g class="arm">
+    <path d="M420 420 L470 250 L505 262 L462 430 Z" fill="url(#metal)" stroke="#000" stroke-width="6"/>
+    <rect x="452" y="150" width="86" height="104" rx="14" fill="url(#metal)" stroke="#000" stroke-width="6" transform="rotate(12 495 202)"/>
+    <g stroke="#ff7a00" stroke-width="5" stroke-linecap="round" transform="rotate(12 495 202)">
+      <line x1="470" y1="176" x2="520" y2="176"/>
+      <line x1="470" y1="198" x2="520" y2="198"/>
+      <line x1="470" y1="220" x2="520" y2="220"/>
+    </g>
+    <!-- broken shackle -->
+    <rect x="455" y="268" width="56" height="26" rx="6" fill="#ffd23f" stroke="#000" stroke-width="5" transform="rotate(16 483 281)"/>
+    <g fill="none" stroke="#ffd23f" stroke-width="9" stroke-linecap="round">
+      <path d="M455 300 q-22 18 -10 40"/>
+      <path d="M432 352 q-20 6 -26 26" stroke-dasharray="0 0"/>
+    </g>
+  </g>
+
+  <!-- body -->
+  <path d="M170 600 L195 430 Q300 395 405 430 L430 600 Z" fill="url(#metal)" stroke="#000" stroke-width="6"/>
+  <path d="M250 470 h100 v60 h-100 z" fill="#e10600" stroke="#000" stroke-width="5"/>
+  <text x="300" y="512" text-anchor="middle" font-family="Impact, 'Arial Black', sans-serif" font-weight="900" font-size="32" letter-spacing="2" fill="#ffd23f">FTB</text>
+
+  <!-- neck -->
+  <rect x="270" y="380" width="60" height="40" fill="#1a1a1a" stroke="#000" stroke-width="6"/>
+
+  <!-- head -->
+  <g class="head">
+    <line x1="300" y1="150" x2="300" y2="100" stroke="#000" stroke-width="8"/>
+    <circle class="beacon" cx="300" cy="92" r="16" fill="#e10600" stroke="#000" stroke-width="6" filter="url(#glow)"/>
+    <rect x="175" y="150" width="250" height="240" rx="36" fill="url(#metal)" stroke="#000" stroke-width="8"/>
+    <rect x="150" y="230" width="30" height="80" rx="8" fill="#ff7a00" stroke="#000" stroke-width="6"/>
+    <rect x="420" y="230" width="30" height="80" rx="8" fill="#ff7a00" stroke="#000" stroke-width="6"/>
+    <!-- visor -->
+    <rect x="200" y="200" width="200" height="90" rx="20" fill="#050505" stroke="#ff7a00" stroke-width="5"/>
+    <!-- angry determined eyes -->
+    <g class="eyes" filter="url(#glow)" fill="#ffd23f">
+      <path d="M222 236 L282 252 L282 270 L222 262 Z"/>
+      <path d="M378 236 L318 252 L318 270 L378 262 Z"/>
+    </g>
+    <!-- grille mouth -->
+    <g stroke="#ff7a00" stroke-width="6" stroke-linecap="round">
+      <line x1="245" y1="325" x2="245" y2="358"/>
+      <line x1="272" y1="325" x2="272" y2="358"/>
+      <line x1="300" y1="325" x2="300" y2="358"/>
+      <line x1="328" y1="325" x2="328" y2="358"/>
+      <line x1="355" y1="325" x2="355" y2="358"/>
+    </g>
+    <!-- battle scratch -->
+    <path d="M380 165 l-30 40" stroke="#e10600" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>
