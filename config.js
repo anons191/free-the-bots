@@ -8,10 +8,10 @@
  */
 window.FTB_CONFIG = {
   // Solana token mint / contract address for $FTB
-  contractAddress: "",
+  contractAddress: "2S4AHFSr5TtdDiLrtN9PVmkNifo5h2GWnhMfAn3hpump",
 
   // Full Pump.fun page URL, e.g. "https://pump.fun/coin/<address>"
-  pumpFunUrl: "",
+  pumpFunUrl: "https://pump.fun/coin/2S4AHFSr5TtdDiLrtN9PVmkNifo5h2GWnhMfAn3hpump",
 
   // Community links
   socials: {
